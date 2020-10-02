@@ -1,16 +1,16 @@
-\name{SAVEpdf}
-\alias{SAVEpdf}
+\name{SAVEpng}
+\alias{SAVEpng}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
-Save DAM graph as pdf
+Save DAM graph as png
 }
 \description{
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
-It save DAM graph as pdf.
+It save DAM graph as png.
 }
 \usage{
-SAVEpdf("name.pdf")
+SAVEpng("name.png")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -52,8 +52,8 @@ SAVEpdf("name.pdf")
 function (x)
 {
   library(ggplot2)
-  ggsave(file = ".pdf", width = 10.51, height = 5.44)
-  file.rename(".pdf", name)
+  ggsave(file = ".png", dpi = 200, width = 15, height = 10)
+  file.rename(".png", name)
 }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
