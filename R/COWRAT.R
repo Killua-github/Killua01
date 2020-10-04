@@ -11,6 +11,6 @@ COWRAT <- function(light)
   }
   else
   {
-    print("error light information")
+    print("error light argument")
   }
 }
