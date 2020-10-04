@@ -15,6 +15,6 @@ COW <- function()
   points(data$ "x=11", data$ "y", pch = "・", type = "l")
   points(data$ "x=13", data$ "y", pch = "・", type = "l")
   polygon(data$black1, data$colorY, col = "black")
-  polygon(data$black2,data$colorY,col = "black")
-  polygon(data$black3,data$colorY,col = "black")
+  polygon(data$black2, data$colorY, col = "black")
+  polygon(data$black3, data$colorY, col = "black")
 }
