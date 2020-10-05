@@ -1,4 +1,4 @@
-CorR <- function(light)
+COWorRAT <- function(light)
 {
   i <- light
   if(i == "LD")
