@@ -1,21 +1,20 @@
-D <- function()
+DAMFileScan <- function(Monitor, dd, mm, yy)
 {
-  library("lubridate")
-  date1 <- ("16 Sep 20")
-  date2 <- ("16 Sep 20")
-  startdate <- dmy_hms(date1)
-  enddate <- dmy_hms(date2)
-  cut_interval <- interval(start = startdate, end = enddate)
-  filelists <- list.files(pattern = "Monitor...txt$")
-  library("data.table")
-  for (i in 1:length(filelists))
+  DAMfileList <- list.files(pattern = "Monitor...txt")
+  library(data.table)
+  for (i in 1:length(DAMfileList))
   {
-    file <- fread(filelists[i])
-    #データを日付型にする
-    timecolumn <- as.POSIXlt(file$V2:V3, format = "%d%m%Y %H:%M:%S",
-                             tz = "Japan")
-    cut_file <- file[cut_interval, ]
-    write.table(cut_file, file = "2010091919CtM019.txt",
-                sep = "\t", row.names = F, col.names = F, quote = F)
+    DAMdata <- DAMfileList[i]
+    DAMfile <- fread(DAMdata)
+    c1 <- DAMfile[V2==paste(dd, mm, yy, sep = " "),]
+    c2 <- DAMfile[V2==paste(dd + 1, mm, yy, sep = " "),]
+    c3 <- DAMfile[V2==paste(dd + 2, mm, yy, sep = " "),]
+    c4 <- DAMfile[V2==paste(dd + 3, mm, yy, sep = " "),]
+    cutDAMfile <- rbindlist(list(c1, c2, c3, c4))
+    CutDAMFile <- cutDAMfile[541:4860, ]
+    write.table(CutDAMFile, paste(dd, mm, yy, "CtM", 0,
+                                  Monitor - 1 + i, ".txt", sep = ""),
+                sep = "\t", row.names = FALSE, col.names = FALSE,
+                quote = FALSE)
   }
 }
