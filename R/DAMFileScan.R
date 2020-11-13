@@ -1,5 +1,7 @@
-DAMFileScan <- function(Monitor, dd, mm, yy)
+D11 <- function(Monitor, yy, MM, dd, hours, mins)
 {
+  mm <- Month(MM)
+  time <- Hours +mins
   DAMfileList <- list.files(pattern = "Monitor...txt")
   library(data.table)
   for (i in 1:length(DAMfileList))
@@ -11,9 +13,9 @@ DAMFileScan <- function(Monitor, dd, mm, yy)
     c3 <- DAMfile[DAMfile$V2 == paste(dd +2, mm, yy, sep = " "),]
     c4 <- DAMfile[DAMfile$V2 == paste(dd +3, mm, yy, sep = " "),]
     cutDAMfile <- rbindlist(list(c1, c2, c3, c4))
-    CutDAMFile <- cutDAMfile[541:4860, ]
+    CutDAMFile <- cutDAMfile[time:(time -1 +(3 *24 *60)),]
     write.table(CutDAMFile, paste(dd, mm, yy, "CtM", 0,
-                                  Monitor - 1 + i, ".txt", sep = ""),
+                                  Monitor -1 +i, ".txt", sep = ""),
                 sep = "\t", row.names = FALSE, col.names = FALSE,
                 quote = FALSE)
   }
