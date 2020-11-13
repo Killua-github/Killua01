@@ -51,6 +51,6 @@ Month <- function(MM)
   }
   else
   {
-    print("error month argument")
+    noquote("error month argument")
   }
 }
