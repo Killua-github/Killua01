@@ -1,6 +1,6 @@
-kDAMsleep1 <- function(Monitor, dd, mm, yy)
+kDAMsleep1 <- function(yy, MM, dd, hours, mins)
 {
-  DAMFileScan(Monitor, dd, mm, yy)
+  DAMFileScan(yy, MM, dd, hours, mins)
   library(flysleep)
   x <- DAMsleep1()
 }
