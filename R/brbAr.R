@@ -1,17 +1,15 @@
-brbAr <- function(temperature1, temperature2, temperature3)
+brbAr <- function(temp1, temp2, temp3)
 {
-  library(readxl)
-  data <- read_excel("yuna.xls")
-  plot(data$ "y=0.5(x)", data$ "y=0.5(y)", pch = "-", type = "n",
+  plot(data$"y=0.5(x)", data$"y=0.5(y)", pch = "-", type = "n",
        bty = "n", ann = "F", xaxt = "n", yaxt = "n",
-       xlim = c(0,14), ylim = c(0.4,1.4))
-  arrows(2.5, 0.5, 1, 0.5, col = "blue")
-  arrows(3.5, 0.5, 5, 0.5, col = "blue")
-  arrows(6.5, 0.5, 5, 0.5, col = "red")
-  arrows(7.5, 0.5, 9, 0.5, col = "red")
-  arrows(10.5, 0.5, 9, 0.5, col = "blue")
-  arrows(11.5, 0.5, 13, 0.5, col = "blue")
-  text(3, 0.5, temperature1)
-  text(7, 0.5, temperature2)
-  text(11, 0.5, temperature3)
+       xlim = c(0, 730), ylim = c(0, 5))
+  arrows(100, 0.5, 0, 0.5, col = "blue")
+  arrows(140, 0.5, 240, 0.5, col = "blue")
+  arrows(340, 0.5, 240, 0.5, col = "red")
+  arrows(380, 0.5, 480, 0.5, col = "red")
+  arrows(580, 0.5, 480, 0.5, col = "blue")
+  arrows(620, 0.5, 720, 0.5, col = "blue")
+  text(120, 0.5, temp1)
+  text(360, 0.5, temp2)
+  text(600, 0.5, temp3)
 }

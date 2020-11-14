@@ -1,16 +1,15 @@
 COWorRAT <- function(light)
 {
-  i <- light
-  if(i == "LD")
+  if(light == "LD")
   {
     COW()
   }
-  else if(i == "DD")
+  else if(light == "DD")
   {
     RAT()
   }
   else
   {
-    print("error light argument")
+    noquote("error light argument")
   }
 }

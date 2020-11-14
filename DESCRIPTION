@@ -1,9 +1,9 @@
 Package: Killua01
 Type: Package
-Title: This package is for advanced students to analyse DAM deta.
-Version: 0.1.0
-Author: Yuki Harui
-Maintainer: Yuki Harui <y.h.08491911@gmail.com>
+Title: This package is for advanced students to analyse DAM detas.
+Version: 1.1.16
+Author: Killua Zaoldyeck
+Maintainer: Killua Zaoldyeck <y.h.08491911@gmail.com>
 Description: This package is based on flysleep paskage. This package can analyse DAM data with detailed instructions.
-License: Yuki Harui
+License: Killua Zaoldyeck
 LazyData: true

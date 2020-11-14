@@ -1,24 +1,23 @@
-arrow <- function(colour, temperature1, temperature2, temperature3)
+arrow <- function(colour, temp1, temp2, temp3)
 {
-  i <- colour
-  if(i == "R")
+  if(colour == "R")
   {
-    rAr(temperature1)
+    rAr(temp1)
   }
-  else if (i == "B")
+  else if (colour == "B")
   {
-    bAr(temperature1)
+    bAr(temp1)
   }
-  else if (i == "RBR")
+  else if (colour == "RBR")
   {
-    rbrAr(temperature1, temperature2, temperature3)
+    rbrAr(temp1, temp2, temp3)
   }
-  else if (i == "BRB")
+  else if (colour == "BRB")
   {
-    brbAr(temperature1, temperature2, temperature3)
+    brbAr(temp1, temp2, temp3)
   }
   else
   {
-    print("error arguments")
+    noquote("error colour argument")
   }
 }
