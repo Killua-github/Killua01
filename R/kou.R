@@ -1,7 +1,5 @@
 kou <- function(light, colour, temp1, temp2, temp3)
 {
-  library(readxl)
-  data <- read_excel("yuna.xls")
   if(light == "LD")
   {
     if(colour == "B")

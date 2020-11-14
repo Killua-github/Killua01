@@ -1,5 +1,7 @@
 RAT <- function()
 {
+  library(readxl)
+  data <- read_excel("yuna.xls")
   plot(data$"y=1.2(x)", data$"y=1.2(y)", pch = "-", type = "l",
        bty = "n", ann = "F", xaxt = "n", yaxt = "n",
        xlim = c(0, 730), ylim = c(0, 5))

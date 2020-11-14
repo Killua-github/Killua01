@@ -1,5 +1,7 @@
 brbAr <- function(temp1, temp2, temp3)
 {
+  library(readxl)
+  data <- read_excel("yuna.xls")
   plot(data$"y=0.5(x)", data$"y=0.5(y)", pch = "-", type = "n",
        bty = "n", ann = "F", xaxt = "n", yaxt = "n",
        xlim = c(0, 730), ylim = c(0, 5))
