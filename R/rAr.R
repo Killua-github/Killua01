@@ -7,5 +7,5 @@ rAr <- function(temp1)
        xlim = c(0, 730), ylim = c(0, 5))
   arrows(340, 0.5, 0, 0.5, col = "red")
   arrows(380, 0.5, 720, 0.5, col = "red")
-  text(360, 0.5, paste(temp1, "°C", sep = ""))
+  text(360, 0.5, paste(temp1, "'C", sep = " "))
 }
