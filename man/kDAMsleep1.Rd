@@ -3,11 +3,12 @@
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
-Edit original DAM datas and analyse them by DAMsleep1
+Edit original DAM datas and analyse them by DAMFileScan and DAMsleep1
 }
 \description{
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
-It is similar to DAM File Scan and DAMsleep1.
+It edits original DAM datas for flysleep analysis.
+And then, it analyses the datas by DAMsleep1. 
 }
 \usage{
 kDAMsleep1(yy, MM, dd, hours, mins)
@@ -16,18 +17,28 @@ kDAMsleep1(yy, MM, dd, hours, mins)
 \arguments{
   \item{yy}{
 %%     ~~Describe \code{yy} here~~
+Write by 2 numbers like "21 Dec 20 09:00" as 20.
+It means editing original DAM datas from year 20.
 }
   \item{MM}{
 %%     ~~Describe \code{MM} here~~
+Write by 2 numbers like "21 Dec 20 09:00" as 12.
+It means editing original DAM datas from month 12.
 }
   \item{dd}{
 %%     ~~Describe \code{dd} here~~
+Write by 2 numbers like "21 Dec 20 09:00" as 21.
+It means editing original DAM datas from date 21.
 }
   \item{hours}{
 %%     ~~Describe \code{hours} here~~
+Write by 2 numbers like "21 Dec 20 09:00" as 09.
+It means editing original DAM datas from hours 09.
 }
   \item{mins}{
 %%     ~~Describe \code{mins} here~~
+Write by 2 numbers like "21 Dec 20 09:00" as 00. 
+It means editing original DAM datas from minutes 00.
 }
 }
 \details{
