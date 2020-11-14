@@ -51,7 +51,8 @@ kou <- function(light, colour, temp1, temp2, temp3)
   {
     if(colour == "B")
     {
-      png(file = paste(light, colour, temp1, ".png", sep = ""),
+      png(file = paste(light, "_", colour, "_",
+                       temp1, ".png", sep = ""),
           width = 1000, height = 400)
       COWorRAT(light)
       par(new = T)
@@ -60,7 +61,8 @@ kou <- function(light, colour, temp1, temp2, temp3)
     }
     else if(colour == "R")
     {
-      png(file = paste(light, colour, temp1, ".png", sep = ""),
+      png(file = paste(light, "_", colour, "_",
+                       temp1, ".png", sep = ""),
           width = 1000, height = 400)
       COWorRAT(light)
       par(new = T)
@@ -69,8 +71,8 @@ kou <- function(light, colour, temp1, temp2, temp3)
     }
     else if(colour == "BRB")
     {
-      png(file = paste(light, colour, temp1, temp2, temp3,
-                       ".png", sep = ""),
+      png(file = paste(light, "_", colour, "_",
+                       temp1, temp2, temp3, ".png", sep = ""),
           width = 1000, height = 400)
       COWorRAT(light)
       par(new = T)
@@ -79,8 +81,8 @@ kou <- function(light, colour, temp1, temp2, temp3)
     }
     else if(colour == "RBR")
     {
-      png(file = paste(light, colour, temp1, temp2, temp3,
-                       ".png", sep = ""),
+      png(file = paste(light, "_", colour, "_",
+                       temp1, temp2, temp3, ".png", sep = ""),
           width = 1000, height = 400)
       COWorRAT(light)
       par(new = T)
