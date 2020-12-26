@@ -53,5 +53,4 @@ Month <- function(MM)
   {
     noquote("error month argument")
   }
-  return(month)
 }
