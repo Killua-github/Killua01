@@ -59,11 +59,11 @@ PMDAMstat <- function(PMMarray, PMsleep)
   b <- matrix(rep(paste("C", c(1:32), sep = "")), 
               ncol = 32)
   row.names(b) <- dimnames(out)[[3]][1]
-  stat <- out[, , 1]
-  stat <- rbind(b, stat)
+  PMstat <- out[, , 1]
+  PMstat <- rbind(b, PMstat)
   for (i in 2:length(out[1, 1, ])) {
     row.names(b) <- dimnames(out)[[3]][i]
-    stat <- rbind(stat, b, out[, , i])
+    PMstat <- rbind(PMstat, b, out[, , i])
   }
   return(PMstat)
 }
