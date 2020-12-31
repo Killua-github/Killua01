@@ -15,5 +15,5 @@ PMimportMarray <- function()
     files[j] <- substring(files[j], nchar(files[j]) -9, nchar(files[j]) -4)
   }
   dimnames(t) <- list(rownames(t), colnames(t), files)
-  return(t)
+  return(PMMarray)
 }
