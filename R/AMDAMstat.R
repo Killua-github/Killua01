@@ -1,4 +1,4 @@
-AMDAMstat <- function(AMMaray, AMsleep)
+AMDAMstat <- function(AMMarray, AMsleep)
 {
   x <- AMMarray
   y <- AMsleep
@@ -59,11 +59,11 @@ AMDAMstat <- function(AMMaray, AMsleep)
   b <- matrix(rep(paste("C", c(1:32), sep = "")), 
               ncol = 32)
   row.names(b) <- dimnames(out)[[3]][1]
-  stat <- out[, , 1]
-  stat <- rbind(b, stat)
+  AMstat <- out[, , 1]
+  AMstat <- rbind(b, AMstat)
   for (i in 2:length(out[1, 1, ])) {
     row.names(b) <- dimnames(out)[[3]][i]
-    stat <- rbind(stat, b, out[, , i])
+    AMstat <- rbind(AMstat, b, out[, , i])
   }
   return(AMstat)
 }
