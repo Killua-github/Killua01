@@ -14,7 +14,7 @@ DAMFileScan <- function(yy, mm, dd, hours, mins)
     DAMfile <- fread(DAMdata)
     c1 <- DAMfile[DAMfile$V2 == date1,]
     c2 <- DAMfile[DAMfile$V2 == date2,]
-    c3 <- DAMfile[DAMfile$V2 == date4,]
+    c3 <- DAMfile[DAMfile$V2 == date3,]
     c4 <- DAMfile[DAMfile$V2 == date4,]
     cutDAMfile <- rbindlist(list(c1, c2, c3, c4))
     CutDAMFile <- cutDAMfile[time1:time2,]
@@ -22,8 +22,7 @@ DAMFileScan <- function(yy, mm, dd, hours, mins)
     M <- formatC(mm, width = 2, flag = "0")
     D <- formatC(dd, width = 2, flag = "0")
     name <- substr(list(DAMdata), start = 8, stop = 9)
-    write.table(CutDAMFile, paste(Y, M, D, "CtM", 0,
-                                  name, ".txt", sep = ""),
+    write.table(CutDAMFile, paste0(Y, M, D, "CtM", 0, name, ".txt"),
                 sep = "\t", row.names = FALSE, col.names = FALSE,
                 quote = FALSE)
   }

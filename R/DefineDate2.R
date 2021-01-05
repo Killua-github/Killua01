@@ -58,6 +58,6 @@ DefineDate2 <- function(yy, mm, dd)
     dd <- 01
   }
   MM <- Month(mm)
-  date2 <- paste(dd, MM, yy, sep = " ")
+  date2 <- paste(dd, MM, yy)
   return(date2)
 }
