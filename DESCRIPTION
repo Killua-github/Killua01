@@ -3,7 +3,7 @@ Type: Package
 Title: This package is for advanced students to analyse DAM detas.
 Version: 1.1.16
 Author: Killua Zaoldyeck
-Maintainer: Killua Zaoldyeck <y.h.08491911@gmail.com>
+Maintainer: Killua Zaoldyeck <5317061h@st.toho-u.jp>
 Description: This package is based on flysleep paskage. This package can analyse DAM data with detailed instructions.
 License: Killua Zaoldyeck
 LazyData: true
