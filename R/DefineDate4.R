@@ -13,17 +13,17 @@ DefineDate4 <- function(yy, mm, dd)
       mm <- mm + 1
       dd <- 01
     }
-    else if (yy == 06)
+    else if (mm == 06)
     {
       mm <- mm + 1
       dd <- 01
     }
-    else if (yy == 09)
+    else if (mm == 09)
     {
       mm <- mm + 1
       dd <- 01
     }
-    else if (yy == 11)
+    else if (mm == 11)
     {
       mm <- mm + 1
       dd <- 01
