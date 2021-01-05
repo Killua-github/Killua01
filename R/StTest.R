@@ -3,24 +3,34 @@ StTest <- function(LD)
   library(readxl)
   summary <- read_excel("summary.xls")
   Summary <- as.matrix(summary)
-  SCutfortTest(LD, summary)
-  LDMarray <- SimportMarray(LD, summary)
+  SCutfortTest(LD, Summary)
+  LDMarray <- SimportMarray(LD, Summary)
   LDsleep <- Sact2sleep(LDMarray)
   LDstat <- SDAMstat(LDMarray, LDsleep, LD)
-  SSavestat(LDstat, LD)
-  for (i in 1:length(summary[,1]))
+  SSavestat(LDstat, Summary, LD)
+  Length1 <- Summary[1, 2]:Summary[1, 3]
+  tstat1 <- LDstat[, Length, 1]
+  if (is.na(Summary[1, 5]))
   {
-    Length <- Summary[i, 2]:Summary[i, 3]
-    if (is.na(summary[i, 5]))
-    {
-      Tstat <- LDstat[, Length, i]
-    }
-    else
-    {
-      exclude <- as.integer(unlist(strsplit(Summary[i, 5], ",")))
-      length <- Length[- which(Length %in% exclude)]
-      Tstat <- LDatat[, length, i]
-    }
+    Tstat1 <- tstat1
   }
-  t.test(Tstat[1, , 1], Tstat[1, , 2], paired = T)
+  else
+  {
+    exclude <- as.integer(unlist(strsplit(Summary[1,5], ",")))
+    Exclude <- exclude - as.numeric(Summary[1, 2]) + 1
+    Tstat1 <- tstat1[, -Exclude]
+  }
+  Length2 <- Summary[2, 2]:Summary[2, 3]
+  tstat2 <- LDstat[, Length, 2]
+  if (is.na(Summary[2, 5]) == TRUE)
+  {
+    Tstat2 <- tstat2
+  }
+  else
+  {
+    exclude <- as.integer(unlist(strsplit(Summary[2,5], ",")))
+    Exclude <- exclude - as.numeric(Summary[2, 2]) + 1
+    Tstat2 <- tstat2[, -Exclude]
+  }
+  t.test(Tstat1[1,], Tstat2[1,])
 }

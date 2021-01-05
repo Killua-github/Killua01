@@ -79,5 +79,7 @@ SDAMstat <- function(LDMarray, LDsleep, LD)
     }
     LDstat[9, , i] <- apply(z[, , i], 2, max)
   }
+  dimnames(LDstat) <- list(rownames(LDstat), rep(paste0("C", c(1:32))),
+                           Summary[, 1])
   return(LDstat)
 }

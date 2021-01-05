@@ -1,16 +1,14 @@
-SSavestat <- function(LDstat, LD)
+SSavestat <- function(LDstat, Summary, LD)
 {
-  dimnames(LDstat) <- list(rownames(LDstat), colnames(LDstat),
-                           dimnames(AMPMMarray)[[3]])
-  b <- matrix(rep(paste("C", c(1:32), sep = "")), ncol = 32)
-  row.names(b) <- dimnames(LDstat)[[3]][1]
-  AMPMstat <- LDstat[, , 1]
-  AMPMstat <- rbind(b, AMPMstat)
-  for (i in 2:length(LDstat[1, 1, ]))
+  Channel <- matrix(rep(paste0("C", c(1:32))), ncol = 32)
+  row.names(Channel) <- Summary[1, 1]
+  LDStat <- LDstat[, , 1]
+  LDStat <- rbind(b, LDStat)
+  for (i in 2:length(Summary[, 1]))
   {
-    row.names(b) <- dimnames(LDstat)[[3]][i]
-    AMPMstat <- rbind(AMPMstat, b, LDstat[, , i])
+    row.names(b) <- Summary[i, 1]
+    LDStat <- rbind(LDStat, b, LDstat[, , i])
   }
-  write.table(AMPMstat, paste("stat", LD, ".txt", sep = ""),
-              col.names = FALSE, row.names = TRUE,sep = "\t", quote = FALSE)
+  write.table(LDStat, paste0("stat", "_", LD, ".txt"),
+              col.names = FALSE, row.names = TRUE, sep = "\t", quote = FALSE)
 }
