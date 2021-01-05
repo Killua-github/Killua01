@@ -1,9 +1,9 @@
-SCutfortTest <- function(LD, summary)
+SCutfortTest <- function(LD, Summary)
 {
   library(data.table)
-  for (i in 1:length(summary[,1]))
+  for (i in 1:length(Summary[,1]))
   {
-    CtDAMfile <- list.files(pattern = paste("Ct", summary[i, 1], ".txt"))
+    CtDAMfile <- list.files(pattern = paste0("Ct", Summary[i, 1], ".txt"))
     CtDAMdata <- fread(CtDAMfile)
     d1 <- CtDAMdata[(1440*0+1):(1440*0+1440),]
     d2 <- CtDAMdata[(1440*1+1):(1440*1+1440),]
@@ -22,7 +22,7 @@ SCutfortTest <- function(LD, summary)
     }
     LDdata <- rbindlist(list(LDd1, LDd2, LDd3))
     date <- substr(CtDAMfile, start = 1, stop = 6)
-    write.table(LDdata, paste(date, summary[i, 1], LD, ".txt", sep = ""),
+    write.table(LDdata, paste0(date, Summary[i, 1], LD, ".txt"),
                 sep = "\t", row.names = FALSE,
                 col.names = FALSE, quote = FALSE)
   }

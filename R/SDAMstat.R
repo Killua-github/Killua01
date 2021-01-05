@@ -1,6 +1,6 @@
 SDAMstat <- function(LDMarray, LDsleep, LD)
 {
-  LDstat <- array(0, dim = c(11, 32, length(AMPMMarray[1, 1, ])))
+  LDstat <- array(0, dim = c(11, 32, length(LDMarray[1, 1, ])))
   if (LD == "L")
   {
     rownames(LDstat) <- c("L total activity counts",
@@ -50,7 +50,7 @@ SDAMstat <- function(LDMarray, LDsleep, LD)
     z <- (LDsleep - 1) * (LDsleep - 1)
     for (j in 1:length(LDsleep[1, , i]))
     {
-      for (k in 2:length(AMPMsleep[, j, i]))
+      for (k in 2:length(LDsleep[, j, i]))
       {
         if (LDsleep[k, j, i] == 1)
         {
