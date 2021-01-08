@@ -11,5 +11,4 @@ kDAMsleep2 <- function (hrs)
   p <- p + geom_errorbar(errors, width = 0.2) + geom_point(size = 2)
   p
   SAVEpng("sleep2graph.png")
-  SAVEpdf("sleep2graph.png")
 }
