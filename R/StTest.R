@@ -1,6 +1,9 @@
 StTest <- function(LD)
 {
   library(readxl)
+  library(data.table)
+  library(ggplot2)
+  library(ggsignif)
   summary <- read_excel("summary.xls")
   Summary <- as.matrix(summary)
   SCutfortTest(LD, Summary)

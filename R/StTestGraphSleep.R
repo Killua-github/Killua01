@@ -1,7 +1,5 @@
 StTestGraphSleep <- function(Tstat1, Tstat2, summary, LD)
 {
-  library(ggplot2)
-  library(ggsignif)
   tdata1 <- Tstat1[4,]
   tdata2 <- Tstat2[4,]
   tData <- list(tdata1, tdata2)

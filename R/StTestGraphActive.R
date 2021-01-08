@@ -1,7 +1,5 @@
 StTestGraphActive <- function(Tstat1, Tstat2, summary, LD)
 {
-  library(ggplot2)
-  library(ggsignif)
   tdata1 <- Tstat1[1,]
   tdata2 <- Tstat2[1,]
   tData <- list(tdata1, tdata2)

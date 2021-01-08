@@ -1,6 +1,5 @@
 SCutfortTest <- function(LD, Summary)
 {
-  library(data.table)
   for (i in 1:length(Summary[,1]))
   {
     CtDAMfile <- list.files(pattern = paste0("Ct", Summary[i, 1], ".txt"))
