@@ -1,6 +1,6 @@
 SCutfortTest <- function(LD, Summary)
 {
-  for (i in 1:length(Summary[,1]))
+  for (i in 1:length(Summary[, 1]))
   {
     CtDAMfile <- list.files(pattern = paste0("Ct", Summary[i, 1], ".txt"))
     CtDAMdata <- fread(CtDAMfile)
