@@ -1,24 +1,24 @@
-StTestGraphSleep <- function(Tstat1, Tstat2, summary, LD)
+StTestGraphSleep <- function(Tstat1, Tstat2, outline, LD)
 {
   tdata1 <- Tstat1[4,]
   tdata2 <- Tstat2[4,]
   tData <- list(tdata1, tdata2)
   meandata <- lapply(tData, mean)
   sddata <- lapply(tData, sd)
-  s1 <- as.character(summary[1, 4])
-  s2 <- as.character(summary[2, 4])
-  Data <- data.frame(summary = c(s1, s2),
+  s1 <- as.character(outline[1, 4])
+  s2 <- as.character(outline[2, 4])
+  Data <- data.frame(outline = c(s1, s2),
                      mean = c(meandata[[1]][1], meandata[[2]][1]),
                      sd = c(sddata[[1]][1], sddata[[2]][1]))
   yRoof = (max(Data$mean) + max(Data$sd)) * 1.2
   pvalue <- t.test(tdata1, tdata2, var.equal = T)$p.value
   c.pvalue <- as.character(round(pvalue, digits = 4))
   d.pvalue <- paste("p", "=", c.pvalue)
-  graph <- ggplot(data = Data, aes(x = summary, y = mean,
-                                   fill = summary)) +
+  graph <- ggplot(data = Data, aes(x = outline, y = mean,
+                                   fill = outline)) +
     geom_point(alpha = 0) +
     geom_bar(stat = "identity", width = 0.4) +
-    xlab(names(summary[4])) +
+    xlab(names(outline[4])) +
     ylab("Sleep (hours per day)") +
     theme(legend.position = "none") +
     geom_errorbar(aes(ymin = mean - sd, ymax = mean + sd,

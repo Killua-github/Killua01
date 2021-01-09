@@ -1,15 +1,15 @@
-SstatExclude2 <- function(LDstat, Summary)
+SstatExclude2 <- function(LDstat, Outline)
 {
-  Length2 <- Summary[2, 2]:Summary[2, 3]
+  Length2 <- Outline[2, 2]:Outline[2, 3]
   tstat2 <- LDstat[, Length2, 2]
-  if (is.na(Summary[2, 5]))
+  if (is.na(Outline[2, 5]))
   {
     Tstat2 <- tstat2
   }
   else
   {
-    exclude <- as.integer(unlist(strsplit(Summary[2, 5], ",")))
-    Exclude <- exclude - as.numeric(Summary[2, 2]) + 1
+    exclude <- as.integer(unlist(strsplit(Outline[2, 5], ",")))
+    Exclude <- exclude - as.numeric(Outline[2, 2]) + 1
     Tstat2 <- tstat2[, -Exclude]
   }
   return(Tstat2)
