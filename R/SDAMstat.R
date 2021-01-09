@@ -1,4 +1,4 @@
-SDAMstat <- function(LDMarray, LDsleep, LD)
+SDAMstat <- function(LDMarray, LDsleep, LD, Outline)
 {
   LDstat <- array(0, dim = c(11, 32, length(LDMarray[1, 1, ])))
   if (LD == "L")
