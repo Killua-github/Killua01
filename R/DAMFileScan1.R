@@ -3,13 +3,13 @@ DAMFileScan1 <- function(yy, mm, dd, hours, mins)
   library(data.table)
   MM <- Month(mm)
   date1 <- paste(dd, MM, yy)
-  for (j in 2:4)
+  days <- 03
+  for (j in 2:days)
   {
     date <- DefineDate(yy, mm, dd, j)
     assign(paste0("date", j), date)
   }
   time1 <- DefineTime1(hours, mins)
-  days <- 03
   time2 <- DefineTime2(time1, days)
   DAMfileList <- list.files(pattern = "Monitor...txt")
   for (i in 1:length(DAMfileList))
