@@ -1,6 +1,6 @@
-Month <- function(MM)
+Month <- function(mm)
 {
-  month <- MM
+  month <- mm
   if(month == 01)
   {
     "Jan"
