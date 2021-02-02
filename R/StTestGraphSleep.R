@@ -16,34 +16,34 @@ StTestGraphSleep <- function(Tstat1, Tstat2, outline, LD)
   d.pvalue <- paste("p", "=", c.pvalue)
   graph <- ggplot(data = Data, aes(x = outline, y = mean,
                                    fill = outline)) +
-    geom_point(alpha = 0) +
-    geom_bar(stat = "identity", width = 0.4) +
-    xlab(names(outline[4])) +
-    ylab("Sleep (hours per day)") +
-    theme(legend.position = "none") +
-    geom_errorbar(aes(ymin = mean - sd, ymax = mean + sd,
-                      width = 0.1)) +
-    geom_signif(y_position = yRoof * 1.0, xmin = 1.0, xmax = 2.0,
-                annotations = 
-                  if (pvalue < 0.001)
-                  {
-                    "***"
-                  }
-                else if (pvalue < 0.01)
-                {
-                  "**"
-                }
-                else if (pvalue < 0.05)
-                {
-                  "*"
-                }
-                else
-                {
-                  "n.s."
-                },
-                tip_length = 0.05, textsize = 7) +
-    annotate("text", x = 1.95, y = yRoof * 1.05, label = d.pvalue,
-             fontface = "italic", size = 7)
+           geom_point(alpha = 0) +
+           geom_bar(stat = "identity", width = 0.4) +
+           xlab(names(outline[4])) +
+           ylab("Sleep Amount (hours per day)") +
+           theme(legend.position = "none") +
+           geom_errorbar(aes(ymin = mean - sd, ymax = mean + sd,
+                             width = 0.1)) +
+           geom_signif(y_position = yRoof * 1.0, xmin = 1.0, xmax = 2.0,
+                       annotations = 
+                         if (pvalue < 0.001)
+                         {
+                           "***"
+                         }
+                         else if (pvalue < 0.01)
+                         {
+                           "**"
+                         }
+                         else if (pvalue < 0.05)
+                         {
+                           "*"
+                         }
+                         else
+                         {
+                           "n.s."
+                         },
+                       tip_length = 0.05, textsize = 7) +
+           annotate("text", x = 1.95, y = yRoof * 1.05, label = d.pvalue,
+                    fontface = "italic", size = 7)
   graph
   SAVEpng(paste0("sleep2tTestSleep_", LD, ".png"))
 }

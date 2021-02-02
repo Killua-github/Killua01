@@ -19,7 +19,7 @@ StTestGraphActive <- function(Tstat1, Tstat2, outline, LD)
            geom_point(alpha = 0) +
            geom_bar(stat = "identity", width = 0.4) +
            xlab(names(outline[4])) +
-           ylab("Activity (counts per day)") +
+           ylab("Activity Counts (counts per day)") +
            theme(legend.position = "none") +
            geom_errorbar(aes(ymin = mean - sd, ymax = mean + sd,
                              width = 0.1)) +
