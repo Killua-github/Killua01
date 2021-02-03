@@ -16,11 +16,11 @@ DAMFileScan1 <- function(yy, mm, dd, hours, mins)
   {
     DAMdata <- DAMfileList[i]
     DAMfile <- fread(DAMdata)
-    c1 <- DAMfile[DAMfile$V2 == date0, ]
-    c2 <- DAMfile[DAMfile$V2 == date1, ]
-    c3 <- DAMfile[DAMfile$V2 == date2, ]
-    c4 <- DAMfile[DAMfile$V2 == date3, ]
-    cutDAMfile <- rbindlist(list(c1, c2, c3, c4))
+    c0 <- DAMfile[DAMfile$V2 == date0, ]
+    c1 <- DAMfile[DAMfile$V2 == date1, ]
+    c2 <- DAMfile[DAMfile$V2 == date2, ]
+    c3 <- DAMfile[DAMfile$V2 == date3, ]
+    cutDAMfile <- rbindlist(list(c0, c1, c2, c3))
     CutDAMFile <- cutDAMfile[time1:time2, ]
     Y <- formatC(yy, width = 2, flag = "0")
     M <- formatC(mm, width = 2, flag = "0")
