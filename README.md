@@ -4,17 +4,18 @@
 
 ### ver. 2.1.1
 ```
-made kou function which is for making the information on experimental conditions
+made kou function
+which is for making the information on experimental conditions
 ```
-- [ ] kou(light, colour, temp1, temp2, temp3)
-      - [ ] COWorRAT(light)
-            - [ ] COW()
-            - [ ] RAT()
-      - [ ] arrow(colour, temp1, temp2, temp3)
-            - [ ] rAr(temp1)
-            - [ ] bAr(temp1)
-            - [ ] rbrAr(temp1, temp2, temp3)
-            - [ ] brbAr(temp1, temp2, temp3)
+- [x] kou(light, colour, temp1, temp2, temp3)
+  - [x] COWorRAT(light)
+- [x] COW()
+      - [x] RAT()
+- [x] arrow(colour, temp1, temp2, temp3)
+- [x] rAr(temp1)
+- [x] bAr(temp1)
+- [x] rbrAr(temp1, temp2, temp3)
+- [x] brbAr(temp1, temp2, temp3)
 
 ### ver. 1.2.1
 ```
