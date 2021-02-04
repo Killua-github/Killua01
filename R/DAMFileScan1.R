@@ -1,10 +1,8 @@
 DAMFileScan1 <- function(yy, mm, dd, hours, mins)
 {
   library(data.table)
-  MM <- Month(mm)
-  date0 <- paste(dd, MM, yy)
   days <- 03
-  for (j in 1:days)
+  for (j in 1:(days + 1))
   {
     date <- DefineDate(yy, mm, dd, j)
     assign(paste0("date", j), date)
@@ -16,11 +14,11 @@ DAMFileScan1 <- function(yy, mm, dd, hours, mins)
   {
     DAMdata <- DAMfileList[i]
     DAMfile <- fread(DAMdata)
-    c0 <- DAMfile[DAMfile$V2 == date0, ]
     c1 <- DAMfile[DAMfile$V2 == date1, ]
     c2 <- DAMfile[DAMfile$V2 == date2, ]
     c3 <- DAMfile[DAMfile$V2 == date3, ]
-    cutDAMfile <- rbindlist(list(c0, c1, c2, c3))
+    c4 <- DAMfile[DAMfile$V2 == date4, ]
+    cutDAMfile <- rbindlist(list(c1, c2, c3, c4))
     CutDAMFile <- cutDAMfile[time1:time2, ]
     Y <- formatC(yy, width = 2, flag = "0")
     M <- formatC(mm, width = 2, flag = "0")

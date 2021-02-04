@@ -1,6 +1,6 @@
 DefineDate <- function(yy, mm, dd, j)
 {
-  for (i in 1:j)
+  for (i in 2:j)
   {
     dd <- dd + 1
     if (dd == 32)
