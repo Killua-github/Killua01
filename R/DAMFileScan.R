@@ -31,7 +31,8 @@ DAMFileScan <- function(yy, mm, dd, hours, mins, days)
     M <- formatC(mm, width = 2, flag = "0")
     D <- formatC(dd, width = 2, flag = "0")
     name <- substr(list(DAMdata), start = 8, stop = 9)
-    write.table(CutDAMFile, paste0(Y, M, D, "CtM", 0, name, ".txt"),
+    write.table(CutDAMFile, paste0(Y, M, D, "_", days,
+                                   "_CtM", 0, name, ".txt"),
                 sep = "\t", row.names = FALSE, col.names = FALSE,
                 quote = FALSE)
   }
