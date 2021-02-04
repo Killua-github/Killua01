@@ -3,9 +3,9 @@
 ## Version History
 
 **ver. 1.1.1**
-[ ] kDAMsleep2
-[ ] SAVEpng
-[ ] SAVEpdf
+- [ ] kDAMsleep2
+- [ ] SAVEpng
+- [ ] SAVEpdf
 
 ```
 change the functions in flysleep package
