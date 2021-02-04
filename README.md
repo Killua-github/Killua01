@@ -5,6 +5,12 @@
 Checked functions are now available.
 ```
 
+### ver. 4.3.1
+```
+Made DAMFileScan2 function which is for cutting any days DAM data.
+```
+- [x] DAMFileScan2(yy, mm, dd, hours, mins, days)
+
 ### ver. 4.2.1
 ```
 ・Changed DAMFileScan function
