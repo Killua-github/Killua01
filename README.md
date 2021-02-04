@@ -1,53 +1,75 @@
 # Killua01
 
 ## Version History
-
-
-- [ ] DAMFileScan1
-- [ ] DAMFileScan2
-- [ ] DefineDate
-- [ ] DefineTime1
-- [ ] DefineTime2
-
-- [ ] Month
-
-
-
-
-
-
-### ver.3.1.1
+```
+Checked functions are now available.
 ```
 
-``` 
-- [ ] kDAMsleep1
-  - [ ] DAMFileScan
-    - [x] Month
-    - [ ] DefineDate1
-    - [ ] DefineDate2
-    - [ ] DefineDate3
-    - [ ] DefineDate4
-    - [ ] DefineTime1
-    - [ ] DefineTime2
+### ver. 4.2.1
+```
+・Changed DAMFileScan function
+ to be able to cut DAM data for any date conditions.
+・Renamed DAMFileScan to DAMFileScan1.
+・Simplified DefineDateX (X is 1, 2, 3 and 4) function
+ and named DefinedDate function.
+・Changed DefineTime2 to correspond to various days.
+```
+- [x] kDAMsleep1(yy, mm, dd, hours, mins)
+  - [x] DAMFileScan1(yy, mm, dd, hours, mins)
+  - [x] DefineDate(yy, mm, dd, j)
+  - [x] DefineTime2(time1, days)
 
+### ver. 4.1.1
+```
+・Made StTest function which is for t-test DAM data
+ devided into the first half of day or the second half. 
+```
+- [x] StTest(LD)
+  - [x] SCutfortTest(LD, Outline)
+  - [x] SimportMarray(LD, Outline)
+  - [x] Sact2sleep(LDMarray)
+  - [x] SDAMstat(LDMarray, LDsleep, LD, Outline)
+  - [x] SSavestat(LDstat, Outline, LD)
+  - [x] SstatExclude1(LDstat, Outline)
+  - [x] SstatExclude2(LDstat, Outline)
+  - [x] StTestGraphActive(Tstat1, Tstat2, outline, LD)
+  - [x] StTestGraphSleep(Tstat1, Tstat2, outline, LD)
+
+### ver. 3.1.1
+```
+・Made DAMFileScan function which is for cutting 3 days DAM data.
+・Changed DAMsleep1 to insert DAMFileScan.
+```
+- [ ] kDAMsleep1(yy, mm, dd, hours, mins)
+  - [ ] DAMFileScan(yy, mm, dd, hours, mins)
+    - [x] Month(mm)
+    - [ ] DefineDate1(yy, mm, dd)
+    - [ ] DefineDate2(yy, mm, dd)
+    - [ ] DefineDate3(yy, mm, dd, hours, mins)
+    - [ ] DefineDate4(yy, mm, dd, hours, mins)
+    - [x] DefineTime1(hours, mins)
+    - [ ] DefineTime2(time1)
 
 ### ver. 2.2.1
 ```
 ・Changed kDAMsleep2 function
- to define the length of y axis (0 - 60 min/hr).
-・Change SAVEpng name to SAVEpng1
+ to define the length of y axis (0 - 60 min/hr) and to insert SAVEpng1.
+・Changed SAVEpng name to SAVEpng1
  which is for saving the 3-day sleep graph as a png file.
-・Change SAVEpdf name to SAVEpdf1
+・Changed SAVEpdf name to SAVEpdf1
  which is for saving the 3-day sleep graph as a pdf file.
-・kDAMsleep2 includes SAVEpng1.
-・kkDAMsleep2 doesn't include SAVEpng1.
+・kkDAMsleep2 is similar to kDAMsleep2 except for that
+ there is no SAVEpng1.
 ```
-
+- [x] kDAMsleep2(hrs)
+  - [x] SAVEpng1(name)
+- [x] kkDAMsleep2(hrs)
+- [x] SAVEpdf1(name)
 
 ### ver. 2.1.1
 ```
-Made kou function
-which is for making the information on experimental conditions.
+・Made kou function
+ which is for making the information on experimental conditions.
 ```
 - [x] kou(light, colour, temp1, temp2, temp3)
   - [x] COWorRAT(light)
@@ -61,7 +83,7 @@ which is for making the information on experimental conditions.
 
 ### ver. 1.2.1
 ```
-Changed DAMsleep2 functions in flysleep package.
+・Changed DAMsleep2 functions in flysleep package.
 ```
 - [ ] kDAMsleep2
 - [ ] SAVEpng
@@ -69,11 +91,11 @@ Changed DAMsleep2 functions in flysleep package.
 
 ### ver. 1.1.1
 ```
-Made hello function.
+・Made hello function.
 ```
 - [x] hello()
 
 ### ver. 1.0.1
 ```
-Made Killua01 repository.
+・Made Killua01 repository.
 ```
