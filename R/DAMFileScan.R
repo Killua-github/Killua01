@@ -1,7 +1,6 @@
-DAMFileScan1 <- function(yy, mm, dd, hours, mins)
+DAMFileScan <- function(yy, mm, dd, hours, mins, days)
 {
   library(data.table)
-  days <- 03
   MM <- Month(mm)
   date0 <- paste(dd, MM, yy)
   Date <- list(date0)
