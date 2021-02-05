@@ -45,5 +45,5 @@ StTestGraphSleep <- function(Tstat1, Tstat2, outline, LD)
            annotate("text", x = 1.95, y = yRoof * 1.05, label = d.pvalue,
                     fontface = "italic", size = 7)
   graph
-  SAVEpng(paste0("sleep2tTestSleep_", LD, ".png"))
+  SAVEpng1(paste0("sleep2tTestSleep_", LD, ".png"))
 }
