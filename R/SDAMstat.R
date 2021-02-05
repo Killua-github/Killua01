@@ -31,22 +31,22 @@ SDAMstat <- function(LDMarray, LDsleep, LD, Outline)
   }
   for (i in 1:length(LDMarray[1, 1, ]))
   {
-    LDstat[1, , i] <- apply(LDMarray[, , i], 2, sum)/3
-    sleep <- apply(LDsleep[, , i], 2, sum)/3
-    LDstat[4, , i] <- sleep/60
-    LDstat[2, , i] <- (1440 - sleep)/60
-    LDstat[3, , i] <- (1440 - sleep)/14.4
-    LDstat[5, , i] <- LDstat[1, , i]/(1440 - sleep)
+    LDstat[1, , i] <- apply(LDMarray[, , i], 2, sum) / 3
+    sleep <- apply(LDsleep[, , i], 2, sum) / 3
+    LDstat[4, , i] <- sleep / 60
+    LDstat[2, , i] <- (1440 - sleep) / 60
+    LDstat[3, , i] <- (1440 - sleep) / 14.4
+    LDstat[5, , i] <- LDstat[1, , i] / (1440 - sleep)
     z <- matrix(0, ncol = 32)
     bout1 <- rbind(z, LDsleep[, , i])
     bout2 <- rbind(LDsleep[, , i], z)
     bout3 <- bout1 - bout2
-    bout4 <- bout3[2:(length(bout3[, 1]) - 1),]
+    bout4 <- bout3[2:(length(bout3[, 1]) - 1), ]
     bout5 <- bout4 * bout4
-    LDstat[6, , i] <- apply(bout5, 2, sum)/3/2
-    LDstat[10, , i] <- sleep/LDstat[6, , i]
-    LDstat[7, , i] <- (1440 - sleep)/LDstat[6, , i]
-    LDstat[8, , i] <- LDstat[1, , i]/LDstat[6, , i]
+    LDstat[6, , i] <- apply(bout5, 2, sum) / 3 / 2
+    LDstat[10, , i] <- sleep / LDstat[6, , i]
+    LDstat[7, , i] <- (1440 - sleep) / LDstat[6, , i]
+    LDstat[8, , i] <- LDstat[1, , i] / LDstat[6, , i]
     z <- (LDsleep - 1) * (LDsleep - 1)
     for (j in 1:length(LDsleep[1, , i]))
     {
@@ -69,7 +69,7 @@ SDAMstat <- function(LDMarray, LDsleep, LD, Outline)
       {
         if (z[k, j, i] == 1)
         {
-          z[k, j, i] <- z[k - 1, j, i] + 1
+          z[k, j, i] <- z[(k - 1), j, i] + 1
         }
         else
         {
