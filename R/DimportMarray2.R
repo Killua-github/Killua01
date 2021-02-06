@@ -2,7 +2,7 @@ DimportMarray2 <- function()
 {
   files <- list.files(pattern = "CtM....txt$")
   sample <- data.matrix(read.table(files[1], sep="\t"))
-  Marray <- array(0, dim=c(length(sample[,1]), 32, length(files)))
+  Marray <- array(0, dim=c(length(sample[, 1]), 32, length(files)))
   for (i in 1:length(files))
   {
     File <- files[i]
