@@ -1,7 +1,7 @@
 StTestGraphSleep <- function(Tstat1, Tstat2, outline, LD)
 {
-  tdata1 <- Tstat1[4,]
-  tdata2 <- Tstat2[4,]
+  tdata1 <- Tstat1[4, ]
+  tdata2 <- Tstat2[4, ]
   tData <- list(tdata1, tdata2)
   meandata <- lapply(tData, mean)
   sddata <- lapply(tData, sd)

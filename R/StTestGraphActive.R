@@ -1,7 +1,7 @@
 StTestGraphActive <- function(Tstat1, Tstat2, outline, LD)
 {
-  tdata1 <- Tstat1[1,]
-  tdata2 <- Tstat2[1,]
+  tdata1 <- Tstat1[1, ]
+  tdata2 <- Tstat2[1, ]
   tData <- list(tdata1, tdata2)
   meandata <- lapply(tData, mean)
   sddata <- lapply(tData, sd)
