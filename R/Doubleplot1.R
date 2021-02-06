@@ -6,7 +6,7 @@ Doubleplot1 <- function()
   Ddoubleplotall(Marray)
   sleep <- act2sleep(Marray)
   stat <- DDAMstat(Marray, sleep)
-  write.table(stat, "stat.txt", col.names = FALSE, row.names = TRUE, 
+  write.table(stat, "stat.txt", col.names = FALSE, row.names = TRUE,
               sep = "\t", quote = FALSE)
   return(Marray)
 }

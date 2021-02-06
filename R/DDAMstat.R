@@ -69,7 +69,8 @@ DDAMstat <- function (Marray, sleep)
   row.names(b) <- dimnames(out)[[3]][1]
   stat <- out[, , 1]
   stat <- rbind(b, stat)
-  for (i in 2:length(out[1, 1, ])) {
+  for (i in 2:length(out[1, 1, ]))
+  {
     row.names(b) <- dimnames(out)[[3]][i]
     stat <- rbind(stat, b, out[, , i])
   }
