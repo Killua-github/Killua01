@@ -1,4 +1,4 @@
-DDAMstat <- function (Marray, sleep) 
+DDAMstat <- function (Marray, sleep)
 {
   out <- array(0, dim = c(11, 32, length(Marray[1, 1, ])))
   days <- length(Marray[, 1, 1]) / 1440
