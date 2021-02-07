@@ -5,11 +5,32 @@
 Checked functions are now available.
 ```
 
+### ver. 5.1.1
+```
+・Changed the details of importMarray2, doubleplotall, DAMstat,
+ doubleplotsummary for doubpleplotting.
+・Made Doubleplotting1 and Doubleplotting2 functions
+ which is for doubleplotting.
+```
+- [x] Doubleplot1()
+  - [x] DimportMarray2()
+  - [x] Ddoubleplotall(Marray)
+  - [x] DDAMstat(Marray, sleep)
+- [x] Doubleplot2(Marray)
+  - [x] Ddoubleplotsummary(Marray, outline, Outline)
+
+### ver. 4.4.1
+```
+・Simplified DAMFileScan1 and DAMFileScan2
+ to one function and named DAMFileScan.
+```
+- [x] DAMFileScan(yy, mm, dd, hours, mins, days)
+
 ### ver. 4.3.1
 ```
 Made DAMFileScan2 function which is for cutting any days DAM data.
 ```
-- [x] DAMFileScan2(yy, mm, dd, hours, mins, days)
+- [ ] DAMFileScan2(yy, mm, dd, hours, mins, days)
 
 ### ver. 4.2.1
 ```
@@ -21,9 +42,9 @@ Made DAMFileScan2 function which is for cutting any days DAM data.
 ・Changed DefineTime2 to correspond to various days.
 ```
 - [x] kDAMsleep1(yy, mm, dd, hours, mins)
-  - [x] DAMFileScan1(yy, mm, dd, hours, mins)
-  - [x] DefineDate(yy, mm, dd, j)
-  - [x] DefineTime2(time1, days)
+  - [ ] DAMFileScan1(yy, mm, dd, hours, mins)
+    - [x] DefineDate(yy, mm, dd, j)
+    - [x] DefineTime2(time1, days)
 
 ### ver. 4.1.1
 ```
@@ -33,7 +54,6 @@ Made DAMFileScan2 function which is for cutting any days DAM data.
 - [x] StTest(LD)
   - [x] SCutfortTest(LD, Outline)
   - [x] SimportMarray(LD, Outline)
-  - [x] Sact2sleep(LDMarray)
   - [x] SDAMstat(LDMarray, LDsleep, LD, Outline)
   - [x] SSavestat(LDstat, Outline, LD)
   - [x] SstatExclude1(LDstat, Outline)
