@@ -1,7 +1,7 @@
 Doubleplot1 <- function()
 {
   library(flysleep)
-  Marray <- DimportMarray2()
+  Marray <- importMarray2()
   barplotall(Marray)
   Ddoubleplotall(Marray)
   sleep <- act2sleep(Marray)
