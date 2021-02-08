@@ -3,10 +3,11 @@ Ddoubleplotall <- function(Marray)
   for(j in 1:length(Marray[1, 1, ]))
   {
     fileName <- unlist(dimnames(Marray)[3])[j]
+    row <- length(Marray[, 1, 1]) / 1440 - 1
     pdf(paste0(fileName, "_doubleplot", ".pdf"), width=11, height=8)
     par(oma = c(0, 0, 2, 0))
-    par(mfcol = c(20,8))
-    par(mai = c(0, 0.05, 0.1, 0))
+    par(mfcol = c(row, 8))
+    par(mai = c(0.03, 0.05, 0.1, 0))
     for (i in 1:length(Marray[1, , j]))
     {
       title <- sprintf("Channel_%d", i)
