@@ -12,7 +12,7 @@ StTestGraphSleep <- function(Tstat1, Tstat2, outline, LD)
                      sd = c(sddata[[1]][1], sddata[[2]][1]))
   yRoof = (max(Data$mean) + max(Data$sd)) * 1.2
   pvalue <- t.test(tdata1, tdata2, var.equal = T)$p.value
-  c.pvalue <- as.character(round(pvalue, digits = 4))
+  c.pvalue <- as.character(sprintf("%0.4e", pvalue))
   d.pvalue <- paste("p", "=", c.pvalue)
   graph <- ggplot(data = Data, aes(x = outline, y = mean,
                                    fill = outline)) +
@@ -20,7 +20,9 @@ StTestGraphSleep <- function(Tstat1, Tstat2, outline, LD)
            geom_bar(stat = "identity", width = 0.4) +
            xlab(names(outline[4])) +
            ylab("Sleep Amount (hours per day)") +
-           theme(legend.position = "none") +
+           theme(legend.position = "none",
+                 axis.title=element_text(size = 15),
+                 axis.text=element_text(size = 12)) +
            geom_errorbar(aes(ymin = mean - sd, ymax = mean + sd,
                              width = 0.1)) +
            geom_signif(y_position = yRoof * 1.0, xmin = 1.0, xmax = 2.0,
@@ -42,8 +44,8 @@ StTestGraphSleep <- function(Tstat1, Tstat2, outline, LD)
                            "n.s."
                          },
                        tip_length = 0.05, textsize = 7) +
-           annotate("text", x = 1.95, y = yRoof * 1.05, label = d.pvalue,
-                    fontface = "italic", size = 7)
+           annotate("text", x = 2.125, y = yRoof * 1.05, label = d.pvalue,
+                    fontface = "italic", size = 5)
   graph
-  SAVEpng1(paste0("sleep2tTestSleep_", LD, ".png"))
+  SAVEpng2(paste0("sleep2tTestSleep_", LD, ".png"))
 }

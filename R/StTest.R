@@ -2,6 +2,7 @@ StTest <- function(LD)
 {
   library(readxl)
   library(data.table)
+  library(flysleep)
   library(ggplot2)
   library(ggsignif)
   outline <- read_excel("summary.xls")
