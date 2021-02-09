@@ -88,6 +88,11 @@ Make a light and tempareture information figure.
 　　　                   temp3; third tempareture written in number
 ```
 ```
+3 days DAM data analyze by tTest.
+
+> KEN()
+```
+```
 3 days DAM data analyze by tTest divide into the first hale of a day and the second half of a day.
 
 > StTest(LD)
@@ -125,6 +130,11 @@ Make doubleplotting graph using average DAM data.
 ## Version History
 ```
 Checked functions are now available.
+```
+
+### ver. 6.2.1
+```
+・Update Usage
 ```
 
 ### ver. 6.1.1
