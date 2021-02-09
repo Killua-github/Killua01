@@ -1,5 +1,17 @@
 # Killua01
 
+## Installation
+```
+Install Killua01 package
+
+> devtools:install_github("Killua-github/Killua01")
+```
+```
+Install flysleep package
+
+> devtools:install_github("ueno-tr/flysleep")
+```
+
 ## Usage
 ```
 Print "Hello, world!". 
