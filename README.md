@@ -24,27 +24,25 @@ https://github.com/ueno-tr/flysleep
 
 ```
 Print "Hello, world!". 
-
-> hello()
 ```
+> hello()
 
 ```
 Analyze Original DAM data for 3 days by DAMFileScan and flysleep::DAMsleep1.
 
-> kDAMsleep1(yy, mm, dd, hours, mins)
-
+  Arguments
 　　yy; year which is the target period start point in two digits
 　　mm; month which is the target period start point in two digits
 　　dd; day which is the target period start point in two digits
 　　hours; hour which is the target period start point in two digits
 　　mins; minute which is the target period start point in two digits
 ```
+> kDAMsleep1(yy, mm, dd, hours, mins)
 
 ```
 Cut out target DAM data from original DAM data.
 
-> DAMFileScan(yy, mm, dd, hours, mins, days)
-
+  Arguments
 　　yy; year which is the target period start point in two digits
 　　mm; month which is the target period start point in two digits
 　　dd; day which is the target period start point in two digits
@@ -52,44 +50,44 @@ Cut out target DAM data from original DAM data.
 　　mins; minute which is the target period start point in two digits
 　　days; length of the targer period in two digits
 ```
+> DAMFileScan(yy, mm, dd, hours, mins, days)
 
 ```
 DAM analyze and make a sleep analysis graph which is fixed y axis value use after flysleep::DAMsleep1.
 
-> kDAMsleep2(hrs)
-
+  Arguments
 　　hrs; the return value from DAMsleep1
 ```
+> kDAMsleep2(hrs)
 
 ```
 DAM analyze and make a sleep analysis graph which is fixed y axis value use after flysleep::DAMsleep1 without saving the graph.
 
-> kkDAMsleep2(hrs)
-
+  Arguments
 　　hrs; the return value from DAMsleep1
 ```
+> kkDAMsleep2(hrs)
 
 ```
 Save a sleep analysis graph as a png file.
 
-> SAVEpng1(name)
-
+  Arguments
 　　name; file name written like "character.png" and character is changeable.
 ```
+> SAVEpng1(name)
 
 ```
 Save a sleep analysis graph as a pdf file.
 
-> SAVEpdf1(name)
-
+  Arguments
 　　name; file name written like "character.png" and character is changeable.
 ```
+> SAVEpdf1(name)
 
 ```
 Make a light and tempareture information figure.
 
-> kou(light, colour, temp1, temp2, temp3)
-
+  Arguments
 　　light; "LD" to make a LD light information figure
 　　       "DD" to make a DD light information figure
 　　colour; "B" to only make a blue arrow for a tempareture information figure
@@ -103,51 +101,50 @@ Make a light and tempareture information figure.
 　　　                   temp2; second tempareture written in number
 　　　                   temp3; third tempareture written in number
 ```
+> kou(light, colour, temp1, temp2, temp3)
 
 ```
 3 days DAM data analyze by tTest.
-
-> KEN()
 ```
+> KEN()
 
 ```
 3 days DAM data analyze by tTest divide into the first hale of a day and the second half of a day.
 
-> StTest(LD)
-
+  Arguments
 　　LD; "L" for selecting the first half of a day
 　　    "D" for selecting the second half of a day
 ```
+> StTest(LD)
 
 ```
 Save a tTest analysis graph as a png file.
 
+  Arguments
+　　name; file name written like "character.png" and character is changeable.
+```
 > SAVEpng2(name)
 
-　　name; file name written like "character.png" and character is changeable.
-```
-
 ```
 Save a tTest analysis graph as a png file.
 
-> SAVEpdf2(name)
-
+  Arguments
 　　name; file name written like "character.png" and character is changeable.
 ```
+> SAVEpdf2(name)
 
 ```
 Make doubleplotting graph using individual DAM data.
-
-> Doubleplot1()
 ```
+> Doubleplot1()
 
 ```
 Make doubleplotting graph using average DAM data.
 
-> Doubleplot2(Marray)
-
+  Arguments
 　　Marray; the return value from Doubleplot1
 ```
+> Doubleplot2(Marray)
 
 ## Version History
 ```
