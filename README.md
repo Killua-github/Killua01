@@ -1,44 +1,164 @@
 # Killua01
 
+## Usage
+```
+Print "Hello, world!". 
+
+> hello()
+```
+```
+Make a light and tempareture information figure.
+
+> kou(light, colour, temp1, temp2, temp3)
+
+　　light; "LD" to make a LD light information figure
+　　       "DD" to make a DD light information figure
+　　colour; "B" to only make a blue arrow for a tempareture information figure
+　　        "R" to only make a red arrow for a tempareture information figure
+　　        "BRB" to make a blue-red-blue arrow for a tempareture information figure
+　　        "RBR" to make a red-blue-red arrow for a tempareture information figure
+　　　if "B" or "R", temp1; tempareture written in number
+　　　               temp2; not use
+　　　               temp3; not use
+　　　if "BRB" or "RBR", temp1; first tempareture written in number
+　　　                   temp2; second tempareture written in number
+　　　                   temp3; third tempareture written in number
+```
+```
+DAM analyze and make a sleep analysis graph which is fixed y axis value use after flysleep::DAMsleep1.
+
+> kDAMsleep2(hrs)
+
+　　hrs; the return value from DAMsleep1
+```
+```
+DAM analyze and make a sleep analysis graph which is fixed y axis value use after flysleep::DAMsleep1 without saving the graph.
+
+> kkDAMsleep2(hrs)
+
+　　hrs; the return value from DAMsleep1
+```
+```
+Save a sleep analysis graph as a png file.
+
+> SAVEpng1(name)
+
+　　name; file name written like "character.png" and character is changeable.
+```
+```
+Save a sleep analysis graph as a pdf file.
+
+> SAVEpdf1(name)
+
+　　name; file name written like "character.png" and character is changeable.
+```
+```
+3 days DAM data analyze by tTest divide into the first hale of a day and the second half of a day.
+
+> StTest(LD)
+
+　　LD; "L" for selecting the first half of a day
+　　    "D" for selecting the second half of a day
+```
+```
+
+
+> kDAMsleep1(yy, mm, dd, hours, mins)
+
+
+```
+```
+
+
+> DAMFileScan(yy, mm, dd, hours, mins, days)
+
+
+```
+```
+
+
+> Doubleplot1()
+
+
+```
+```
+
+
+> Doubleplot2(Marray)
+
+
+```
+```
+Save a tTest analysis graph as a png file.
+
+> SAVEpng2(name)
+
+　　name; file name written like "character.png" and character is changeable.
+```
+```
+Save a tTest analysis graph as a png file.
+
+> SAVEpdf2(name)
+
+　　name; file name written like "character.png" and character is changeable.
+```
+
 ## Version History
 ```
 Checked functions are now available.
 ```
 
+### ver. 5.4.1
+```
+・Created Usage in README
+```
+
+### ver. 5.3.1
+```
+・Changed the Details of All Function.
+```
+
+### ver. 5.2.1
+```
+・Made SAVEpng2 and SAVEpdf2 functions for StTest.
+```
+- [x] SAVEpng2(name)
+- [x] SAVEpdf2(nmae)
+
 ### ver. 5.1.1
 ```
-・Changed the details of importMarray2, doubleplotall, DAMstat,
- doubleplotsummary for doubpleplotting.
-・Made Doubleplotting1 and Doubleplotting2 functions
- which is for doubleplotting.
+・Changed the details of importMarray2, doubleplotall, DAMstat, and doubleplotsummary for doubpleplotting.
+・Made Doubleplotting1 and Doubleplotting2 functions which is for doubleplotting.
 ```
 - [x] Doubleplot1()
-  - [x] DimportMarray2()
+  - [ ] DimportMarray2()
   - [x] Ddoubleplotall(Marray)
   - [x] DDAMstat(Marray, sleep)
 - [x] Doubleplot2(Marray)
   - [x] Ddoubleplotsummary(Marray, outline, Outline)
 
+### ver. 4.5.1
+```
+・Created Version History in README.
+```
+
 ### ver. 4.4.1
 ```
-・Simplified DAMFileScan1 and DAMFileScan2
- to one function and named DAMFileScan.
+・Simplified DAMFileScan1 and DAMFileScan2 to one function and named DAMFileScan.
 ```
 - [x] DAMFileScan(yy, mm, dd, hours, mins, days)
 
 ### ver. 4.3.1
 ```
-Made DAMFileScan2 function which is for cutting any days DAM data.
+・Made DAMFileScan2 function which is for cutting any days DAM data.
 ```
 - [ ] DAMFileScan2(yy, mm, dd, hours, mins, days)
 
 ### ver. 4.2.1
 ```
-・Changed DAMFileScan function
- to be able to cut DAM data for any date conditions.
+・Changed DAMFileScan function to be able to cut DAM data for any date conditions.
 ・Renamed DAMFileScan to DAMFileScan1.
-・Simplified DefineDateX (X is 1, 2, 3 and 4) function
- and named DefinedDate function.
+・Simplified DefineDateX (X is 1, 2, 3 and 4) function and named DefinedDate function.
 ・Changed DefineTime2 to correspond to various days.
 ```
 - [x] kDAMsleep1(yy, mm, dd, hours, mins)
@@ -48,8 +168,7 @@ Made DAMFileScan2 function which is for cutting any days DAM data.
 
 ### ver. 4.1.1
 ```
-・Made StTest function which is for t-test DAM data
- devided into the first half of day or the second half. 
+・Made StTest function which is for t-test DAM data devided into the first half of day or the second half. 
 ```
 - [x] StTest(LD)
   - [x] SCutfortTest(LD, Outline)
@@ -78,14 +197,10 @@ Made DAMFileScan2 function which is for cutting any days DAM data.
 
 ### ver. 2.2.1
 ```
-・Changed kDAMsleep2 function
- to define the length of y axis (0 - 60 min/hr) and to insert SAVEpng1.
-・Changed SAVEpng name to SAVEpng1
- which is for saving the 3-day sleep graph as a png file.
-・Changed SAVEpdf name to SAVEpdf1
- which is for saving the 3-day sleep graph as a pdf file.
-・kkDAMsleep2 is similar to kDAMsleep2 except for that
- there is no SAVEpng1.
+・Changed kDAMsleep2 function to define the length of y axis (0 - 60 min/hr) and to insert SAVEpng1.
+・Changed SAVEpng name to SAVEpng1 which is for saving the 3-day sleep graph as a png file.
+・Changed SAVEpdf name to SAVEpdf1 which is for saving the 3-day sleep graph as a pdf file.
+・kkDAMsleep2 is similar to kDAMsleep2 except for that there is no SAVEpng1.
 ```
 - [x] kDAMsleep2(hrs)
   - [x] SAVEpng1(name)
@@ -94,8 +209,7 @@ Made DAMFileScan2 function which is for cutting any days DAM data.
 
 ### ver. 2.1.1
 ```
-・Made kou function
- which is for making the information on experimental conditions.
+・Made kou function which is for making the information on experimental conditions.
 ```
 - [x] kou(light, colour, temp1, temp2, temp3)
   - [x] COWorRAT(light)
