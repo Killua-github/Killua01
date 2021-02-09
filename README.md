@@ -127,6 +127,15 @@ Make doubleplotting graph using average DAM data.
 Checked functions are now available.
 ```
 
+### ver. 6.1.1
+```
+・Made KEN functions which is for tTest 3 days DAM data.
+```
+- [x] KEN()
+  - [x] DORA(pon, acmean1, acmean2, slmean1, slmean2)
+  - [x] HATU(dora, acmean1, acmean2)
+  - [x] TYUN(dora, slmean1, slmean2)
+
 ### ver. 5.4.1
 ```
 ・Created Usage in README
