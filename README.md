@@ -61,32 +61,38 @@ Save a sleep analysis graph as a pdf file.
 　　    "D" for selecting the second half of a day
 ```
 ```
-
+Analyze Original DAM data for 3 days by DAMFileScan and flysleep::DAMsleep1.
 
 > kDAMsleep1(yy, mm, dd, hours, mins)
 
-
+　　yy; year which is the target period start point in two digits
+　　mm; month which is the target period start point in two digits
+　　dd; day which is the target period start point in two digits
+　　hours; hour which is the target period start point in two digits
+　　mins; minute which is the target period start point in two digits
 ```
 ```
-
+Cut out target DAM data from original DAM data.
 
 > DAMFileScan(yy, mm, dd, hours, mins, days)
 
-
+　　yy; year which is the target period start point in two digits
+　　mm; month which is the target period start point in two digits
+　　dd; day which is the target period start point in two digits
+　　hours; hour which is the target period start point in two digits
+　　mins; minute which is the target period start point in two digits
 ```
 ```
-
+Make doubleplotting graph using individual DAM data.
 
 > Doubleplot1()
-
-
 ```
 ```
-
+Make doubleplotting graph using average DAM data.
 
 > Doubleplot2(Marray)
 
-
+　　Marray; the return value from Doubleplot1
 ```
 ```
 Save a tTest analysis graph as a png file.
