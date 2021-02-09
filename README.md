@@ -19,22 +19,27 @@ Print "Hello, world!".
 > hello()
 ```
 ```
-Make a light and tempareture information figure.
+Analyze Original DAM data for 3 days by DAMFileScan and flysleep::DAMsleep1.
 
-> kou(light, colour, temp1, temp2, temp3)
+> kDAMsleep1(yy, mm, dd, hours, mins)
 
-　　light; "LD" to make a LD light information figure
-　　       "DD" to make a DD light information figure
-　　colour; "B" to only make a blue arrow for a tempareture information figure
-　　        "R" to only make a red arrow for a tempareture information figure
-　　        "BRB" to make a blue-red-blue arrow for a tempareture information figure
-　　        "RBR" to make a red-blue-red arrow for a tempareture information figure
-　　　if "B" or "R", temp1; tempareture written in number
-　　　               temp2; not use
-　　　               temp3; not use
-　　　if "BRB" or "RBR", temp1; first tempareture written in number
-　　　                   temp2; second tempareture written in number
-　　　                   temp3; third tempareture written in number
+　　yy; year which is the target period start point in two digits
+　　mm; month which is the target period start point in two digits
+　　dd; day which is the target period start point in two digits
+　　hours; hour which is the target period start point in two digits
+　　mins; minute which is the target period start point in two digits
+```
+```
+Cut out target DAM data from original DAM data.
+
+> DAMFileScan(yy, mm, dd, hours, mins, days)
+
+　　yy; year which is the target period start point in two digits
+　　mm; month which is the target period start point in two digits
+　　dd; day which is the target period start point in two digits
+　　hours; hour which is the target period start point in two digits
+　　mins; minute which is the target period start point in two digits
+　　days; length of the targer period in two digits
 ```
 ```
 DAM analyze and make a sleep analysis graph which is fixed y axis value use after flysleep::DAMsleep1.
@@ -65,46 +70,30 @@ Save a sleep analysis graph as a pdf file.
 　　name; file name written like "character.png" and character is changeable.
 ```
 ```
+Make a light and tempareture information figure.
+
+> kou(light, colour, temp1, temp2, temp3)
+
+　　light; "LD" to make a LD light information figure
+　　       "DD" to make a DD light information figure
+　　colour; "B" to only make a blue arrow for a tempareture information figure
+　　        "R" to only make a red arrow for a tempareture information figure
+　　        "BRB" to make a blue-red-blue arrow for a tempareture information figure
+　　        "RBR" to make a red-blue-red arrow for a tempareture information figure
+　　　if "B" or "R", temp1; tempareture written in number
+　　　               temp2; not use
+　　　               temp3; not use
+　　　if "BRB" or "RBR", temp1; first tempareture written in number
+　　　                   temp2; second tempareture written in number
+　　　                   temp3; third tempareture written in number
+```
+```
 3 days DAM data analyze by tTest divide into the first hale of a day and the second half of a day.
 
 > StTest(LD)
 
 　　LD; "L" for selecting the first half of a day
 　　    "D" for selecting the second half of a day
-```
-```
-Analyze Original DAM data for 3 days by DAMFileScan and flysleep::DAMsleep1.
-
-> kDAMsleep1(yy, mm, dd, hours, mins)
-
-　　yy; year which is the target period start point in two digits
-　　mm; month which is the target period start point in two digits
-　　dd; day which is the target period start point in two digits
-　　hours; hour which is the target period start point in two digits
-　　mins; minute which is the target period start point in two digits
-```
-```
-Cut out target DAM data from original DAM data.
-
-> DAMFileScan(yy, mm, dd, hours, mins, days)
-
-　　yy; year which is the target period start point in two digits
-　　mm; month which is the target period start point in two digits
-　　dd; day which is the target period start point in two digits
-　　hours; hour which is the target period start point in two digits
-　　mins; minute which is the target period start point in two digits
-```
-```
-Make doubleplotting graph using individual DAM data.
-
-> Doubleplot1()
-```
-```
-Make doubleplotting graph using average DAM data.
-
-> Doubleplot2(Marray)
-
-　　Marray; the return value from Doubleplot1
 ```
 ```
 Save a tTest analysis graph as a png file.
@@ -119,6 +108,18 @@ Save a tTest analysis graph as a png file.
 > SAVEpdf2(name)
 
 　　name; file name written like "character.png" and character is changeable.
+```
+```
+Make doubleplotting graph using individual DAM data.
+
+> Doubleplot1()
+```
+```
+Make doubleplotting graph using average DAM data.
+
+> Doubleplot2(Marray)
+
+　　Marray; the return value from Doubleplot1
 ```
 
 ## Version History
