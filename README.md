@@ -93,7 +93,7 @@ Make a light and tempareture information figure.
 　　colour; "B" to only make a blue arrow for a tempareture information figure
 　　        "R" to only make a red arrow for a tempareture information figure
 　　        "BRB" to make a blue-red-blue arrow for a tempareture information figure
-　　        "RBR" to make a red-blue-red arrow for a tempareture information figure
+　　        "RBE"to make a red-blue-red arrow for a tempareture information figure
 　　　if "B" or "R", temp1; tempareture written in number
 　　　               temp2; not use
 　　　               temp3; not use
