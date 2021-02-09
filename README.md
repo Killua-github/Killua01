@@ -3,19 +3,18 @@
 ## Installation
 ```
 Install Killua01 package
-
-> devtools:install_github("Killua-github/Killua01")
 ```
+> devtools:install_github("Killua-github/Killua01")
+
 ```
 Install flysleep package
-
-> devtools:install_github("ueno-tr/flysleep")
 ```
+> devtools:install_github("ueno-tr/flysleep")
+
 ```
 Install summary.xls and yuna.xls files
-
-https://drive.google.com/drive/folders/1zEObP64_WZdeTE_4SLK25vzhQtBqKnBG?usp=sharing
 ```
+https://drive.google.com/drive/folders/1zEObP64_WZdeTE_4SLK25vzhQtBqKnBG?usp=sharing
 
 ## Usage
 ```
@@ -23,6 +22,7 @@ Print "Hello, world!".
 
 > hello()
 ```
+
 ```
 Analyze Original DAM data for 3 days by DAMFileScan and flysleep::DAMsleep1.
 
@@ -34,6 +34,7 @@ Analyze Original DAM data for 3 days by DAMFileScan and flysleep::DAMsleep1.
 　　hours; hour which is the target period start point in two digits
 　　mins; minute which is the target period start point in two digits
 ```
+
 ```
 Cut out target DAM data from original DAM data.
 
@@ -46,6 +47,7 @@ Cut out target DAM data from original DAM data.
 　　mins; minute which is the target period start point in two digits
 　　days; length of the targer period in two digits
 ```
+
 ```
 DAM analyze and make a sleep analysis graph which is fixed y axis value use after flysleep::DAMsleep1.
 
@@ -53,6 +55,7 @@ DAM analyze and make a sleep analysis graph which is fixed y axis value use afte
 
 　　hrs; the return value from DAMsleep1
 ```
+
 ```
 DAM analyze and make a sleep analysis graph which is fixed y axis value use after flysleep::DAMsleep1 without saving the graph.
 
@@ -60,6 +63,7 @@ DAM analyze and make a sleep analysis graph which is fixed y axis value use afte
 
 　　hrs; the return value from DAMsleep1
 ```
+
 ```
 Save a sleep analysis graph as a png file.
 
@@ -67,6 +71,7 @@ Save a sleep analysis graph as a png file.
 
 　　name; file name written like "character.png" and character is changeable.
 ```
+
 ```
 Save a sleep analysis graph as a pdf file.
 
@@ -74,6 +79,7 @@ Save a sleep analysis graph as a pdf file.
 
 　　name; file name written like "character.png" and character is changeable.
 ```
+
 ```
 Make a light and tempareture information figure.
 
@@ -92,11 +98,13 @@ Make a light and tempareture information figure.
 　　　                   temp2; second tempareture written in number
 　　　                   temp3; third tempareture written in number
 ```
+
 ```
 3 days DAM data analyze by tTest.
 
 > KEN()
 ```
+
 ```
 3 days DAM data analyze by tTest divide into the first hale of a day and the second half of a day.
 
@@ -105,6 +113,7 @@ Make a light and tempareture information figure.
 　　LD; "L" for selecting the first half of a day
 　　    "D" for selecting the second half of a day
 ```
+
 ```
 Save a tTest analysis graph as a png file.
 
@@ -112,6 +121,7 @@ Save a tTest analysis graph as a png file.
 
 　　name; file name written like "character.png" and character is changeable.
 ```
+
 ```
 Save a tTest analysis graph as a png file.
 
@@ -119,11 +129,13 @@ Save a tTest analysis graph as a png file.
 
 　　name; file name written like "character.png" and character is changeable.
 ```
+
 ```
 Make doubleplotting graph using individual DAM data.
 
 > Doubleplot1()
 ```
+
 ```
 Make doubleplotting graph using average DAM data.
 
