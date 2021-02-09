@@ -18,6 +18,11 @@ https://drive.google.com/drive/folders/1zEObP64_WZdeTE_4SLK25vzhQtBqKnBG?usp=sha
 
 ## Usage
 ```
+The usage detail of flysleep package and functions.
+```
+https://github.com/ueno-tr/flysleep
+
+```
 Print "Hello, world!". 
 
 > hello()
