@@ -1,19 +1,18 @@
 # Killua01
 
 ## Installation
-```
+
 Install Killua01 package
 ```
-> devtools:install_github("Killua-github/Killua01")
-
+devtools:install_github("Killua-github/Killua01")
 ```
+
 Install flysleep package
 ```
-> devtools:install_github("ueno-tr/flysleep")
+devtools:install_github("ueno-tr/flysleep")
+```
 
-```
 Install summary.xls and yuna.xls files
-```
 https://drive.google.com/drive/folders/1zEObP64_WZdeTE_4SLK25vzhQtBqKnBG?usp=sharing
 
 ## Usage
