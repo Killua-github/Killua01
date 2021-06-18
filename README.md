@@ -16,27 +16,25 @@ Install summary.xls and yuna.xls files
 > https://drive.google.com/drive/folders/1zEObP64_WZdeTE_4SLK25vzhQtBqKnBG?usp=sharing
 
 ## Usage
-```
-The usage detail of flysleep package and functions.
-```
-https://github.com/ueno-tr/flysleep
 
-```
+The usage detail of flysleep package and functions.
+> https://github.com/ueno-tr/flysleep
+
 Print "Hello, world!". 
 ```
-> hello()
-
+hello()
 ```
+
 Analyze Original DAM data for 3 days by DAMFileScan and flysleep::DAMsleep1.
-
-  Arguments
-　　yy; year which is the target period start point in two digits
-　　mm; month which is the target period start point in two digits
-　　dd; day which is the target period start point in two digits
-　　hours; hour which is the target period start point in two digits
-　　mins; minute which is the target period start point in two digits
 ```
-> kDAMsleep1(yy, mm, dd, hours, mins)
+kDAMsleep1(yy, mm, dd, hours, mins)
+```
+  Arguments
+　- yy; year which is the target period start point in two digits
+　- mm; month which is the target period start point in two digits
+　- dd; day which is the target period start point in two digits
+　- hours; hour which is the target period start point in two digits
+　- mins; minute which is the target period start point in two digits
 
 ```
 Cut out target DAM data from original DAM data.
