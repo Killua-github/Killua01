@@ -101,6 +101,10 @@ Make doubleplotting graph using average DAM data.
 
 Checked functions are now available.  
 
+### ver. 6.2.2
+
+・Rewrite README.  
+
 ### ver. 6.2.1
 
 ・Update Usage.  
