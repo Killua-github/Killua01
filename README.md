@@ -29,12 +29,12 @@ Analyze Original DAM data for 3 days by DAMFileScan and flysleep::DAMsleep1.
 ```
 kDAMsleep1(yy, mm, dd, hours, mins)
 ```
-  Arguments
-　- yy; year which is the target period start point in two digits
-　- mm; month which is the target period start point in two digits
-　- dd; day which is the target period start point in two digits
-　- hours; hour which is the target period start point in two digits
-　- mins; minute which is the target period start point in two digits
+> Arguments  
+> - yy; year which is the target period start point in two digits  
+> - mm; month which is the target period start point in two digits  
+> - dd; day which is the target period start point in two digits  
+> - hours; hour which is the target period start point in two digits  
+> - mins; minute which is the target period start point in two digits  
 
 ```
 Cut out target DAM data from original DAM data.
